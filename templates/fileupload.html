@@ -1,30 +1,23 @@
-{%  extends "base.html" %}
+{% extends "base.html" %}
 <body>
     {% block dynamiccontent %}
-    <div>
+    <div style="background-color: #f2f2f2; font-family: Arial, sans-serif;">
         {% if success %}
-            {{ success }}
+            <div style="margin: 10px 0; padding: 10px; background-color: #a2d8a0; color: #116a36; border-radius: 5px;">{{ success }}</div>
         {% endif %}
         {% if error %}
-            {{ error }}
+            <div style="margin: 10px 0; padding: 10px; background-color: #f19e9e; color: #b32525; border-radius: 5px;">{{ error }}</div>
         {% endif %}
-        <br>
-        <form action="/fileupload" method="post" enctype="multipart/form-data">
-            <input type="file" name="givenfile" id="givenfile"><br>
-            <br>
-            <input type="email" style="height: 2em; width:18em" name="emailid1" id="emailid1" placeholder="Enter User 1 Emailid"><br>
-            <br>
-            <input type="email" style="height: 2em; width:18em" name="emailid2" id="emailid2" placeholder="Enter User 2 Emailid"><br>
-            <br>
-            <input type="email" style="height: 2em; width:18em" name="emailid3" id="emailid3" placeholder="Enter User 3 Emailid"><br>
-            <br>
-            <input type="email" style="height: 2em; width:18em" name="emailid4" id="emailid4" placeholder="Enter User 4 Emailid"><br>
-            <br>
-            <input type="email" style="height: 2em; width:18em" name="emailid5" id="emailid5" placeholder="Enter User 4 Emailid"><br>
-            <br>
-            <br>
-            <input type="submit" style="height: 2em; width:18.7em; background-color: rgb(121, 121, 229); color:white"  name="submitbutton" value="Send">
+        <form style="background-color: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding: 20px; margin: 20px auto; max-width: 400px;" action="/fileupload" method="post" enctype="multipart/form-data">
+            <input style="padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;" type="file" name="givenfile" id="givenfile"><br>
+            <input style="padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;" type="email" name="emailid1" id="emailid1" placeholder="Enter User 1 Emailid"><br>
+            <input style="padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;" type="email" name="emailid2" id="emailid2" placeholder="Enter User 2 Emailid"><br>
+            <input style="padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;" type="email" name="emailid3" id="emailid3" placeholder="Enter User 3 Emailid"><br>
+            <input style="padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;" type="email" name="emailid4" id="emailid4" placeholder="Enter User 4 Emailid"><br>
+            <input style="padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;" type="email" name="emailid5" id="emailid5" placeholder="Enter User 5 Emailid"><br>
+            <input style="padding: 10px; background-color: #4173b3; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease-in-out;" type="submit" name="submitbutton" value="Send">
         </form>
     </div>
     {% endblock %}
 </body>
+</html>
